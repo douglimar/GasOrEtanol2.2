@@ -24,8 +24,8 @@
     <string name="consumo_medio_result">O Consumo Médio do seu veículo é de %s Km por Litro de Combustível</string>
     <string name="posto_gasolina">posto de gasolina</string>
     <string name="todo">TODO</string>
-
     <string name="title_activity_bootsplash">BootsplashActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="consumo_medio_toast">Informe a quilometragem percorrida e os litros gastos.</string>
 </resources>

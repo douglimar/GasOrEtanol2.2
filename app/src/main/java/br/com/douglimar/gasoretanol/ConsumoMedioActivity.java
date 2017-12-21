@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -78,10 +79,18 @@ public class ConsumoMedioActivity extends AppCompatActivity {
 
                 hideKeyboardFrom(getApplicationContext(), v);
 
-                Double iKM = Double.parseDouble(edtKmPercorrido.getText().toString());
-                Double iLitros = Double.parseDouble(edtLitrosCombustivel.getText().toString());
 
-                calcularConsumoMedio(iKM, iLitros);
+                if ( (edtKmPercorrido.getText().toString().isEmpty())||
+                        (edtLitrosCombustivel.getText().toString().isEmpty()) ) {
+
+                    Toast.makeText(getApplicationContext(), getString(R.string.consumo_medio_toast), Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Double iKM = Double.parseDouble(edtKmPercorrido.getText().toString());
+                    Double iLitros = Double.parseDouble(edtLitrosCombustivel.getText().toString());
+
+                    calcularConsumoMedio(iKM, iLitros);
+                }
 
             }
         });
